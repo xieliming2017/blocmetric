@@ -1,0 +1,3 @@
+<h1><%= @registered_application.name %></h1>
+<p>URL: <%= @registered_application.url %></p>
+<%= link_to "Delete Registration", @registered_application, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this registration?'} %>
