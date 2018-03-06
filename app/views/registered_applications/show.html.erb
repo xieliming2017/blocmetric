@@ -2,9 +2,5 @@
 <p>URL: <%= @registered_application.url %></p>
 <p>Events count: <%= @events.count %></p>
 <hr />
-<h3>Associated Events:</h3>
-<% @events.each do |event| %>
-  <p><%= link_to event[0], event_path(event[1][0].id) %></p>
-<% end %>
-<hr />
+
 <%= link_to "Delete Registration", @registered_application, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this registration?'} %>

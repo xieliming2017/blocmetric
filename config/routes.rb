@@ -1,16 +1,14 @@
 Rails.application.routes.draw do
-  get 'events/index'
 
-  get 'events/show'
+  namespace :api, defaults: { format: :json } do
+    match '/events', to: 'events#preflight', via: [:options]
+    resources :events, only: [:create]
+  end
 
   resources :registered_applications
-  resources :events
-
-
   devise_for :users
 
   get 'about' => 'welcome#about'
-
 
   root 'welcome#index'
 
