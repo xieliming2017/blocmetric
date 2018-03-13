@@ -32,6 +32,11 @@ gem 'bootstrap'
 gem 'figaro'
 gem 'devise'
 
+gem "chartkick"
+gem 'groupdate'
+
+
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
